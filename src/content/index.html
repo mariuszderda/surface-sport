@@ -1,45 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Site title </title>
-    <meta name="description" content="Description" />
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>Site title </title>
+  <meta content="Description" name="description"/>
 
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
+  <!-- Title -->
+  <meta content="" property="og:title"/>
+  <!-- OPTIONAL description. 2-4 sentences. -->
+  <meta content="" property="og:description"/>
+  <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
+  <meta content="" property="og:url"/>
+  <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
+  <meta content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" property="og:image"/>
 
-    <link rel="manifest" href="manifest.json" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+  <link href="manifest.json" rel="manifest"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <link
+          href="assets/pwa/icons/icon-192x192.png"
+          rel="apple-touch-icon"
+          sizes="192x192"
+  />
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+  <link
+          href="assets/pwa/icons/icon-192x192.png"
+          rel="icon"
+          type="image/png"
+  />
 
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-<section class="hero">
-   <div class="logo-wrapper">
-     <img src="" alt="">
-   </div>
-</section>
+  <link href="css/main.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="main">
+  <section class="hero">
+    <div class="wrapper--logo">
+      <img alt="logo surface1." class="logo__image" src="">
+      <span class="logo__title"></span>
+    </div>
+    <h1 class="hero__title">be recruited</h1>
+    <h2 class="hero__subtitle">play college sports</h2>
+    <ul class="hero__list">
+      <li class="hero__item">football</li>
+      <li class="hero__item">basketball</li>
+      <li class="hero__item">baseball</li>
+      <li class="hero__item">soccer</li>
+      <li class="hero__item">ice hockey</li>
+    </ul>
 
-    <script src="js/main.js"></script>
-  </body>
+    <div class="wrapper--app-link">
+      <a class="hero__link" href="#">
+        <img alt="apple logo." class="hero__link-image" src="">
+        <span class="hero__link-text">download on the<br>app store</span>
+      </a>
+      <a href="#">
+        <img alt="apple logo." class="hero__link-image" src="">
+        <span class="hero__link-text">get it on<br>google play</span>
+      </a>
+    </div>
+  </section>
+  <section class="athlets">
+    <img alt="football player with ball." class="athlets__image" src="">
+    <h2 class="athlets__title">athlets</h2>
+    <div class="wrapper--athlets">
+      <section class="athlets__features">
+        <span class="athlets__number">01</span>
+        <h3 class="athlets__subtitle">connection</h3>
+        <p class="athlets__paragraph">Connect with coaches directly, you can ping coaches to view profile.</p>
+      </section>
+      <section class="athlets__features">
+        <span class="athlets__number">02</span>
+        <h3 class="athlets__subtitle">collaboration</h3>
+        <p class="athlets__paragraph">Work with other student athletes to  increase visability. When you share and like
+          other players videos it will increase your visability as a player. This is the team work aspect to Surface
+          1.</p>
+      </section>
+      <section class="athlets__features">
+        <span class="athlets__number">03</span>
+        <h3 class="athlets__subtitle">growth</h3>
+        <p class="athlets__paragraph">Resources and tools for you to get better as a student Athelte.
+          Access to training classes, tutor sessions, etc </p>
+      </section>
+    </div>
+  </section>
+</main>
+<footer class="footer"></footer>
+<script src="js/main.js"></script>
+</body>
 </html>
- 
