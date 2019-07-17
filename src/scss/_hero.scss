@@ -1,0 +1,102 @@
+.hero {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  background: url("../assets/img/header-image.jpg");
+  position: relative;
+
+  &__app-link {
+    @include wrapper-style (row, space-between, center);
+    margin: 80px 0 150px;
+  }
+
+  &__item {
+    @include font-style(12px, 13px, 0.2px);
+    text-transform: uppercase;
+    color: #9071EA;
+    padding: 7px 15px;
+    display: inline-block;
+  }
+
+  &__link {
+    @include font-style(8px, 9px, 0.4px);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background: #5C3CAF;
+    display: block;
+    width: 142px;
+    height: 40px;
+    @include wrapper-style(row, center, center);
+    box-shadow: 0px 16px 24px rgba(10, 14, 52, 0.5);
+    border-radius: 100px;
+    cursor: pointer;
+    margin: 0 14px;
+  }
+
+  &__link-image {
+    width: 16px;
+    margin-right: 10px;
+
+  }
+
+  &__list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0 0 10px 0;
+    @include wrapper-style(row, center, center);
+    flex-flow: wrap;
+    list-style-type: none;
+    width: 100%;
+  }
+
+  &__subtitle {
+    @include font-style(32px, 36px, 1px, bold);
+    text-transform: uppercase;
+    color: #fff;
+    padding-left: 55px;
+    margin-top: 14px;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      width: 221px;
+      height: 4px;
+      background: $violet;
+      position: absolute;
+      transform: rotate(128deg);
+      left: 87px;
+      top: 10px;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    @include font-style(32px, 36px, 1.6px, bold);
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 130px;
+    padding-left: 9px;
+    position: relative;
+    z-index: 2;
+  }
+
+
+}
+
+
+.logo__title {
+  display: none;
+}
+
+.wrapper {
+  &--logo {
+    padding-top: 39.5px;
+    @include wrapper-style(row, center, center);
+  }
+}

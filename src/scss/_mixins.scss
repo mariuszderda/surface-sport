@@ -1,0 +1,13 @@
+@mixin font-style($size, $height, $space, $style: normal){
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $space;
+  font-style: normal;
+  font-weight: $style;
+}
+@mixin wrapper-style($direction: row, $justify: flex-start, $items: flex-start){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $items;
+}
