@@ -1,0 +1,58 @@
+.athletes{
+  position: relative;
+  &__features{
+    width: 100%;
+    padding: 80px 0 0 19px;
+    flex-shrink: 0;
+    height: 284px;
+    scroll-behavior: smooth;
+    background: #979797;
+  }
+  &__image{
+    position: absolute;
+    width: 100%;
+    max-width: 200px;
+    left: 70px;
+  }
+  &__number{
+    @include font-style(14px, 16px, 1.5px, bold);
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      left: 1px;
+      bottom: -1px;
+      z-index: 2;
+      -webkit-border-radius: 2.5px;
+      -moz-border-radius: 2.5px;
+      border-radius: 2.5px;
+      width: 17px;
+      height: 4px;
+      background: #603EBE;
+    }
+  }
+  &__paragraph{
+    @include font-style(15px, 17px, .74px);
+    color: #000000;
+    margin-top: -5px;
+  }
+  &__subtitle{
+    @include font-style(28px, 31px, 1.5px, bold);
+    color: #C2C2C2;
+    text-transform: uppercase;
+    margin: 9px 0 0 27px;
+  }
+  &__title{
+    @include font-style(50px, 50px, null, bold);
+    color: #E7E7E7;
+    text-transform: uppercase;
+    margin-left: 19px;
+  }
+}
+.wrapper--athletes {
+  width: 100%;
+  height: 284px;
+  display: flex;
+  overflow-x: auto;
+  margin-top: 178px;
+}
