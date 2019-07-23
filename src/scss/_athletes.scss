@@ -14,7 +14,7 @@
     position: absolute;
     width: 100%;
     max-width: 200px;
-    left: 70px;
+    left: calc(50vw - 100px);
     z-index: 2;
   }
   &__number{
@@ -50,7 +50,7 @@
     margin-top: 0;
     color: #E7E7E7;
     text-transform: uppercase;
-    margin-left: 19px;
+    margin-left: calc(50vw - 150px);
     position: relative;
     &::after, &::before{
       content: "+";
