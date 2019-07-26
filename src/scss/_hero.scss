@@ -5,11 +5,10 @@
   background: url("/assets/img/header-image.jpg");
   position: relative;
 
-
   &__app-link {
-    @include wrapper-style (row, space-around, flex-end);
+    @include wrapper-style(row, space-around, flex-end);
     margin: 100px 0;
-    @media screen and (min-width: $tablet){
+    @media screen and (min-width: $tablet) {
       position: absolute;
       bottom: -10px;
       width: 100%;
@@ -38,7 +37,7 @@
     border-radius: 100px;
     cursor: pointer;
     margin: 0 14px;
-    @media screen and (min-width: $tablet){
+    @media screen and (min-width: $tablet) {
       @include font-style(14px, 16px, 0.4px);
       width: 311px;
       height: 77px;
@@ -48,7 +47,7 @@
   &__link-image {
     width: 16px;
     margin-right: 10px;
-    @media screen and (min-width: $tablet){
+    @media screen and (min-width: $tablet) {
       width: 32px;
     }
   }
@@ -63,7 +62,7 @@
     flex-flow: wrap;
     list-style-type: none;
     width: 100%;
-    @media screen and (min-width: $tablet){
+    @media screen and (min-width: $tablet) {
       @include wrapper-style(row, space-around, center);
       bottom: 281px;
     }
@@ -112,10 +111,7 @@
       padding-left: 54px;
     }
   }
-
-
 }
-
 
 .logo {
   &__title {
@@ -128,15 +124,17 @@
       display: block;
     }
   }
-  &__image{
+
+  &__image {
     margin: 0 20px;
   }
 }
-  .wrapper--logo {
-    padding-top: 39.5px;
-    @include wrapper-style(row, center, center);
-    @media screen and (min-width: 768px) {
-      justify-content: space-between;
-      padding-top: 52px;
-    }
+
+.wrapper--logo {
+  padding-top: 39.5px;
+  @include wrapper-style(row, center, center);
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+    padding-top: 52px;
   }
+}

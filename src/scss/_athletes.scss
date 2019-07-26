@@ -1,7 +1,12 @@
-.athletes{
+.athletes {
   position: relative;
   margin: 0;
-  &__features{
+  @media screen and (min-width: $tablet) {
+    width: 100%;
+    height: 793px;
+  }
+
+  &__features {
     width: 100%;
     padding: 80px 0 0 19px;
     flex-shrink: 0;
@@ -9,18 +14,42 @@
     scroll-behavior: smooth;
     background: #979797;
     position: relative;
+    @media screen and (min-width: $tablet) {
+      padding: 40px 20px 40px 306px;
+      z-index: -2;
+      &--transparent{
+        background-color: transparent;
+      }
+      &--gray{
+        background-color: #F5F4F9;
+      }
+      &--violet{
+        background-color: #5E3DB3;
+      }
+
+    }
   }
-  &__image{
+
+  &__image {
     position: absolute;
     width: 100%;
     max-width: 200px;
     left: calc(50vw - 100px);
     z-index: 2;
+    @media screen and (min-width: $tablet) {
+      left: -162px;
+      min-width: 498px;
+      top: 96px;
+    }
+
   }
-  &__number{
+
+  &__number {
     @include font-style(14px, 16px, 1.5px, bold);
     position: relative;
-    &::after{
+    z-index: 99;
+
+    &::after {
       content: "";
       position: absolute;
       left: 1px;
@@ -33,48 +62,74 @@
       height: 4px;
       background: #603EBE;
     }
+
+    @media screen and (min-width: $tablet) {
+      float: left;
+      @include font-style(18px, 20px, 1.5px, bold);
+      margin: 5px 5px 0 0;
+      z-index:2;
+      &::after {
+        width: 22px;
+        height: 5px;
+        bottom: -2px;
+      }
+    }
   }
-  &__paragraph{
+
+  &__paragraph {
     @include font-style(15px, 17px, .74px);
     color: #000000;
     margin-top: -5px;
+    @media screen and (min-width: $tablet) {
+      @include font-style(18px, 28px, .873px);
+    }
   }
-  &__subtitle{
+
+  &__subtitle {
     @include font-style(28px, 31px, 1.5px, bold);
     color: #C2C2C2;
     text-transform: uppercase;
     margin: 9px 0 0 27px;
+    @media screen and (min-width: $tablet) {
+      position: relative;
+      margin: 0;
+      padding: 0 0 10px 10px;
+      z-index: 999;
+    }
+
   }
-  &__title{
+
+  &__title {
     @include font-style(50px, 50px, 1px, bold);
     margin-top: 0;
     color: #E7E7E7;
     text-transform: uppercase;
     margin-left: calc(50vw - 150px);
-    position: relative;
-    &::after, &::before{
-      content: "+";
-      font-size: 35px;
+    @media screen and (min-width: $tablet) {
+      @include font-style(80px, 101px, 0.9px, bold);
+      margin: 0;
+      padding: 0 0 0 306px;
       position: absolute;
-      z-index: 2;
-      color: #5C3CAF;
-    }
-    &::after{
-      left: 33px;
-      top: -5px;
-      opacity: 0.3;
-    }
-    &::before{
-      left: 57px;
-      top: 1px;
-      opacity: 0.8;
+      left: 0;
+      top: -10px;
+      z-index: -10;
     }
   }
 }
+
 .wrapper--athletes {
   width: 100%;
   height: 284px;
   display: flex;
   overflow-x: auto;
   margin: 178px auto 85px;
+  @media screen and (min-width: $tablet) {
+    overflow: unset;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+
+
+  }
 }

@@ -1,50 +1,79 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext");
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-	font-family: "Montserrat", sans-serif;
-	background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
 }
 
-.cross{
-	position: absolute;
-	width: 3px;
-	height: 280px;
-	left: calc(50vw - 50px);
-	top: -30px;
-	z-index: 1;
-	background-color: #936EEA;
-	transform: rotate(45deg);
-	&--players {
-		left: calc(50vw - 50px);
-		top: 80px;
-		height: 200px;
-	}
-	&--players-1{
-		left: calc(50vw + 80px);
-		top: 40px;
-		height: 110px;
+.cross {
+  position: absolute;
+  width: 3px;
+  height: 280px;
+  left: calc(50vw - 50px);
+  top: -30px;
+  z-index: 1;
+  background-color: #936EEA;
+  transform: rotate(45deg);
+  @include font-style(50px, 50px, 1px, bold);
 
-		&::after{
-			content: "+";
-			transform: rotate(45deg);
-			font-size: 35px;
-			position: absolute;
-			z-index: 2;
-			color: #5C3CAF;
-			right: -40px;
-			top: 60px;
-			opacity: 0.8;
+  &::after, &::before {
+    transform: rotate(45deg);
+    content: "+";
+    font-size: 35px;
+    position: absolute;
+    z-index: 2;
+    color: #5C3CAF;
+  }
 
-		}
-	}
+  &::after {
+    left: -120px;
+    top: 100px;
+    opacity: 0.3;
+  }
+
+  &::before {
+    left: -100px;
+    top: 95px;
+    opacity: 0.8;
+  }
+
+  &--players {
+    left: calc(50vw - 50px);
+    top: 80px;
+    height: 200px;
+  }
+
+  &--players-1 {
+    left: calc(50vw + 80px);
+    top: 40px;
+    height: 110px;
+
+    &::after {
+      content: "+";
+      transform: rotate(45deg);
+      font-size: 35px;
+      position: absolute;
+      z-index: 2;
+      color: #5C3CAF;
+      right: -40px;
+      top: 60px;
+      opacity: 0.8;
+
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    left: 110px;
+    top: 40px;
+  }
 }
